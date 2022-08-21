@@ -9,6 +9,8 @@ from ipywidgets import interact
 from numpy import asarray
 from IPython.display import display
 
+#directing to pytesseract path
+pytesseract.pytesseract.tesseract_cmd = r'C:\Users\USER\anaconda3\Lib\site-packages\pytesseract\Tesseract-OCR\tesseract.exe'
 
 # loading the face detection classifier
 face_cascade = cv.CascadeClassifier('haarcascade_frontalface_default.xml')
