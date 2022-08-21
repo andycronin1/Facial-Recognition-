@@ -7,13 +7,13 @@ import cv2 as cv
 import numpy as np
 from ipywidgets import interact
 from numpy import asarray
+from IPython.display import display
 
 
 # loading the face detection classifier
-face_cascade = cv.CascadeClassifier('readonly/haarcascade_frontalface_default.xml')
-eye_cascade = cv.CascadeClassifier('readonly/haarcascade_eye.xml')
+face_cascade = cv.CascadeClassifier('haarcascade_frontalface_default.xml')
+eye_cascade = cv.CascadeClassifier('haarcascade_eye.xml')
 #Function list 
-
 
 def load_from_zip(zip_file):
     #importing zip file 
@@ -79,8 +79,9 @@ def contact_sheet(lists):
     # resize and display the contact sheet
     contact_sheet = contact_sheet.resize((int(contact_sheet.width/2),int(contact_sheet.height/2) ))
     display(contact_sheet)
-img_list = load_from_zip('readonly/small_img.zip')
-big_img_list = load_from_zip('readonly/images.zip')
+    
+img_list = load_from_zip('small_img.zip')
+big_img_list = load_from_zip('images.zip')
 
 
 #Small zip file 
